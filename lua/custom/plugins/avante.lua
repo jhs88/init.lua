@@ -6,7 +6,7 @@ return {
       providers = {
         lmstudio = {
           __inherited_from = 'openai',
-          endpoint = 'http://localhost:1234/v1',
+          endpoint = 'http://locahost:1234/v1',
           model = 'openai/gpt-oss-120b',
           api_key_name = 'TERM',
           timeout = 30000, -- Timeout in milliseconds
@@ -21,6 +21,15 @@ return {
       },
       behaviour = {
         auto_set_keymaps = false,
+      },
+      acp_providers = {
+        ['opencode'] = {
+          command = 'opencode',
+          args = { 'acp' },
+          -- env = {
+          --   OPENCODE_API_KEY = os.getenv("OPENCODE_API_KEY")
+          -- }
+        },
       },
     },
   },
