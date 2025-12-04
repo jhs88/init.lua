@@ -6,7 +6,7 @@ return {
       providers = {
         lmstudio = {
           __inherited_from = 'openai',
-          endpoint = 'http://locahost:1234/v1',
+          endpoint = 'http://localhost:1234/v1',
           model = 'openai/gpt-oss-120b',
           api_key_name = 'TERM',
           timeout = 30000, -- Timeout in milliseconds
